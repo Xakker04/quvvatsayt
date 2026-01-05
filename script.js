@@ -171,7 +171,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setupActiveNavLink();
     setupButtonEffects();
     setupCardEffects();
-    
     console.log('✓ University website initialized successfully');
 });
 
@@ -187,3 +186,13 @@ function debounce(func, wait) {
         timeout = setTimeout(later, wait);
     };
 }
+  document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("menuToggle");
+  const menu = document.getElementById("navMenu");
+
+  if (toggle && menu) {
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  }
+});
